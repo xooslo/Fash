@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: #333;
+}
+
+header {
+    width: 100%; 
+    height: 100px; 
+    background: #fff;
+    margin-left: 420px;
+    margin-top: 80px;
+}
+
+.background {
+    display: flex; 
+    align-items: center; 
+    width: 1200px; 
+    height: 100px; 
+    margin: 0 auto;
+}
+
+.logo_div {
+    width: 360px; 
+    height: 90px;
+}
