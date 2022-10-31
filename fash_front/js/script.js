@@ -10,7 +10,7 @@ $(".mainMenu").hover(
 var slide = $(".slide > img");
 var sno = 0;
 var eno = slide.length - 1;
-var timer = setInterval("autoslide()", 8000); // 3초마다 모션함수 실행
+var timer = setInterval("autoslide()", 6000); // 6초마다 모션함수 실행
 
 // 모션함수
 function autoslide() {
@@ -87,7 +87,7 @@ function showImage() {
     var objImg = document.getElementById("logo");
 
     objImg.src = imgArray[lno];
-    setTimeout(showImage, 8000);
+    setTimeout(showImage, 6000);
 
     lno++;
     if(lno > ino) {
