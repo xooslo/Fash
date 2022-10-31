@@ -16,13 +16,9 @@ header {
 .background {
     display: flex; 
     align-items: center; 
-    width: 1200px; 
+    width: 1400px; 
     height: 100px; 
     margin: 0 auto;
-}
-
-.logo{
-    padding-left: 30px;
 }
 
 .logo_div {
@@ -36,6 +32,7 @@ header {
     position: absolute;
     top: 0;
     left: -100%;
+    padding-left: 30px;
 }
 
 .logo_div > img:first-child {
@@ -45,7 +42,7 @@ header {
 nav > ul {
     display: flex; 
     width: 600px; 
-    margin-left: 380px;
+    margin-left: 450px;
 }
 
 nav a {
