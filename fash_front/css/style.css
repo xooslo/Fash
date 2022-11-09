@@ -1,3 +1,20 @@
+@font-face {
+    font-family: 'Happiness-Sans-Title';
+    src: url("../css/fonts/ttf/Happiness-Sans-Title.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Happiness-Sans-Regular';
+    src: url("../css/fonts/ttf/Happiness-Sans-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'DMSerifDisplay-Regular';
+    src: url("../css/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf");
+}
+
 * {
     padding: 0;
     margin: 0;

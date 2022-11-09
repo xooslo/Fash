@@ -1,32 +1,18 @@
 @font-face {
     font-family: 'Happiness-Sans-Title';
-    src: url("../css/fonts/screen/ttf/Happiness-Sans-Title.ttf");
+    src: url("../css/fonts/ttf/Happiness-Sans-Title.ttf");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Happiness-Sans-Regular';
-    src: url("../css/fonts/screen/ttf/Happiness-Sans-Regular.ttf");
-}
-
-@font-face {
-    font-family: '웰컴체 Bold';
-    src: url("../css/welcome_font/웰컴체\ Bold.ttf");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: '웰컴체 Regular';
-    src: url("../css/welcome_font/웰컴체\ Regular.ttf");
-    font-weight: normal;
-    font-style: normal;
+    src: url("../css/fonts/ttf/Happiness-Sans-Regular.ttf");
 }
 
 @font-face {
     font-family: 'DMSerifDisplay-Regular';
-    src: url("../css/DM_Serif_Display/DMSerifDisplay-Regular.ttf");
+    src: url("../css/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf");
 }
 
 * {
@@ -168,7 +154,30 @@
 	width: 500px
 
 }
- 
+
+.join-input-email input{
+    width: 50%;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.322);
+    padding: 20px;
+    opacity: 0.5;
+}
+
+.join-input-email select{
+    width: 40%;
+    border-radius: 3px;
+    padding: 20px;
+    opacity: 0.5;
+}
+
+.info-form{
+    margin-left: 100px;
+}
+
+.submit{
+    margin-right: 100px;
+}
+
 .submit button {
     padding: 20px;
     border: 1px solid black;
