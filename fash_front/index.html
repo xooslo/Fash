@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>FASH</title>
@@ -7,6 +8,7 @@
     <script src="./js/jquery-3.1.1.min.js"></script>
     <script src="https://kit.fontawesome.com/ce67765f5e.js" crossorigin="anonymous"></script>
 </head>
+
 <body onload="showImage()">
     <header>
         <div class="background">
@@ -21,14 +23,14 @@
                         <a href="#">HOME</a>
                         <ul class="subMenu">
                             <li><a href="./login/login.html">로그인</a></li>
-                            <li><a href="#">회원 가입</a></li>
-                            <li><a href="#">회원 정보<br>수정하기</a></li>
+                            <li><a href="./join/join.html">회원 가입</a></li>
+                            <li><a href="./update/MemberUpdate.html">회원 정보<br>수정하기</a></li>
                         </ul>
                     </li>
                     <li class="mainMenu">
-                        <a href="#">PRODUCTS</a>
+                        <a href="./product/product.html">PRODUCTS</a>
                         <ul class="subMenu">
-                             <li><a href="#">상의</a></li>
+                            <li><a href="#">상의</a></li>
                             <li><a href="#">하의</a></li>
                             <li><a href="#">가방</a></li>
                             <li><a href="#">액세서리</a></li>
@@ -37,8 +39,8 @@
                     <li class="mainMenu">
                         <a href="#">ABOUT</a>
                         <ul class="subMenu">
-                            <li><a href="#">개발자 보기</a></li>
-                            <li><a href="#">개발 과정<br>둘러보기</a></li>
+                            <li id="modal_btn"><a href="#">개발자 보기</a></li>
+                            <li><a href="https://github.com/xooslo/Fash">개발 과정<br>둘러보기</a></li>
                         </ul>
                     </li>
                     <li class="mainMenu">
@@ -57,13 +59,47 @@
     </header>
 
     <div class="mainBody">
+
+        <div class="popUpBox">
+            <div class="popUp">
+                <h2>오늘의 추천 코디 🐈‍⬛🎱</h2>
+                <p>바시티 재킷과 레더 팬츠로 완성한 개성 만점 스트릿 룩</p>
+                <p><a href="#">코디에 사용된 아이템 <b>보러가기 -> </b></a></p>
+            </div>
+        </div>
+
+        <div class="popUpBox2">
+            <div class="popUp2">
+                <h2>오늘의 추천 코디 🪀🧩</h2>
+                <p>윈드브레이커와 체크 패턴 카디건의 조합에 캐주얼한 스커트로 완성한 캐주얼 룩</p>
+                <p><a href="#">코디에 사용된 아이템 <b>보러가기 -> </b></a></p>
+            </div>
+        </div>
+
+        <div class="popUpBox3">
+            <div class="popUp3">
+                <h2>오늘의 추천 코디 🍊🩳</h2>
+                <p>체크 패턴 비니와 양털 후리스로 완성한 호박 느낌의 캐주얼 룩</p>
+                <p><a href="#">코디에 사용된 아이템 <b>보러가기 -> </b></a></p>
+            </div>
+        </div>
+
         <div class="slide">
-            <img src="./images/main_black.png" alt="슬라이드이미지1">
-            <img src="./images/main_green.png" alt="슬라이드이미지2">
-            <img src="./images/main_orange.png" alt="슬라이드이미지3">
+            <img src="./images/main_black.png" alt="슬라이드이미지1" class="mainImg">
+            <img src="./images/main_green.png" alt="슬라이드이미지2" class="mainImg2">
+            <img src="./images/main_orange.png" alt="슬라이드이미지3" class="mainImg3">
+        </div>
+    </div>
+
+    <div class="modal_background"></div>
+    <div class="modal_wrap">
+        <div class="modal_close">x</div>
+        <div class="text">
+            
         </div>
     </div>
 
     <script src="./js/script.js"></script>
 </body>
+
 </html>

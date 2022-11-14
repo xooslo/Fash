@@ -25,103 +25,269 @@
 }
 
 header {
-    width: 100%; 
-    height: 100px; 
+    width: 100%;
+    height: 100px;
     background: #fff;
 }
 
 .background {
-    display: flex; 
-    align-items: center; 
-    width: 1400px; 
-    height: 100px; 
+    display: flex;
+    align-items: center;
+    width: 1400px;
+    height: 100px;
     margin: 0 auto;
 }
 
 .logo_div {
     overflow: hidden;
     position: relative;
-    width: 180px; 
+    width: 180px;
     height: 45px;
 }
 
-.logo_div > img {
+.logo_div>img {
     position: absolute;
     top: 0;
     left: -100%;
     padding-left: 30px;
 }
 
-.logo_div > img:first-child {
+.logo_div>img:first-child {
     left: 0;
 }
 
-nav > ul {
-    display: flex; 
-    width: 600px; 
+nav>ul {
+    display: flex;
+    width: 600px;
     margin-left: 450px;
 }
 
 nav a {
-    display: block; 
-    text-align: center; 
-    background:  #fff; 
-    padding:10px;
+    display: block;
+    text-align: center;
+    background: #fff;
+    padding: 10px;
 }
 
 .mainMenu {
-    position:relative; 
+    position: relative;
     width: 25%;
 }
 
-.mainMenu > a {
-    font-size: 18px; 
+.mainMenu>a {
+    font-size: 18px;
     font-weight: 600;
 }
 
 .subMenu {
-    position:absolute; 
-    width: 100%; 
-    z-index: 998; 
+    position: absolute;
+    width: 100%;
+    z-index: 997;
     display: none;
 }
 
-.mainMenu:hover > a {
-    color:#fff; 
+.mainMenu:hover>a {
+    color: #fff;
     background: black;
 }
 
-.mainMenu:hover > a > i{
+.mainMenu:hover>a>i {
     color: white;
 }
 
 .subMenu li:hover a {
-    color:#fff; 
+    color: #fff;
     background: black;
 }
 
 .mainBody {
-    position:relative; 
-    width: 1400px; 
-    height: 900px; 
+    position: relative;
+    width: 1400px;
+    height: 900px;
     margin: 0 auto;
 }
 
+.popUpBox {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    z-index: 998;
+    display: none;
+}
+
+.popUp {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    left: 80%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 2;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background: #fff;
+    padding: 20px;
+}
+
+.popUp p {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.popUp a {
+    font-size: 13px;
+    padding: 10px;
+}
+
+.popUp a>b {
+    color: blue;
+}
+
+.popUp2 a>b {
+    color: green;
+}
+
+.popUp3 a>b {
+    color: orange;
+}
+
+.popUpBox2 {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    z-index: 998;
+    display: none;
+}
+
+.popUp2 {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    left: 300%;
+    top: 200%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 2;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background: #fff;
+    padding: 20px;
+}
+
+.popUp2 p {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.popUp2 a {
+    padding: 10px;
+    font-size: 13px;
+}
+
+.popUpBox3 {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    z-index: 998;
+    display: none;
+}
+
+.popUp3 {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    left: 60%;
+    top: 250%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 2;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background: #fff;
+    padding: 20px;
+}
+
+.popUp3 p {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.popUp3 a {
+    padding: 10px;
+    font-size: 13px;
+}
+
 .slide {
-    width: 1400px; 
+    width: 1400px;
     height: 900px;
     overflow: hidden;
     position: relative;
 }
 
-.slide > img {
+.slide>img {
     position: absolute;
-    width: 1400px; 
+    width: 1400px;
     height: 900px;
     top: 0;
     left: -100%;
 }
 
-.slide > img:first-child {
+.slide>img:first-child {
     left: 0;
 }
+
+/* 모달창 시작 */
+
+.modal_wrap {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    margin: -250px 0 0 -250px;
+    background-image: url("../images/Me.jpg");
+    z-index: 2;
+    display: none;
+}
+
+.modal_wrap.show-modal {
+    display: block;
+}
+
+.modal_background.show-modal {
+    display: block;
+}
+
+.modal_background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+.modal_close {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.modal_wrap .text {
+    margin-top: 45px;
+    margin-left: 5px;
+}
+
+.modal_close .closeImg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* 모달창 끝 */

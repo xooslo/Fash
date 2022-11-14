@@ -1,3 +1,4 @@
+// 메인 메뉴 호버 시 서브메뉴 드롭다운
 $(".mainMenu").hover(
     function () {
         $(this).children(".subMenu").stop().slideDown("slow");
@@ -7,6 +8,7 @@ $(".mainMenu").hover(
     }
 );
 
+// 이미지 슬라이드 쿼리
 var slide = $(".slide > img");
 var sno = 0;
 var eno = slide.length - 1;
@@ -41,39 +43,7 @@ function autoslide() {
     }, 1000);
 };
 
-/*
-var logo = $(".logo_div > img");
-var lno = 0;
-var ino = logo.length - 1;
-var time = setInterval("autoSlide()", 8000);
-
-function autoSlide() {
-
-    $(logo[lno]).stop().animate(
-        {
-            left: "100%"
-        },
-        1000,
-        function() {
-            $(this).css({
-            
-             left: "-100%"
-            });
-        }
-    );
-
-    // 나타날 이미지 카운트
-    lno++;
-    if(lno > ino) {
-        lno = 0;
-    }
-
-    // 두번째 이미지 나타나기
-    $(logo[lno]).stop().animate({
-        left: "0"
-    }, 1000);
-}; */
-
+// 로고 이미지 슬라이드 쿼리
 var logo = $(".logo_div > img");
 var lno = 0;
 var ino = logo.length - 1;
@@ -90,7 +60,71 @@ function showImage() {
     setTimeout(showImage, 6000);
 
     lno++;
-    if(lno > ino) {
+    if (lno > ino) {
         lno = 0;
     }
+};
+
+// 메인 이미지에 마우스 호버 시 팝업 창 띄우기
+var popUp = $(".popUpBox");
+var popUp2 = $(".popUpBox2");
+var popUp3 = $(".popUpBox3");
+
+// 첫번째 메인 이미지 적용
+$(document).ready(function () {
+    $(".mainImg").mouseover(function () {
+        popUp.fadeTo('slow', .9);
+    });
+    $(".mainBody").mouseout(function () {
+        popUp.fadeOut('fast');
+    });
+});
+
+// 두번째 메인 이미지 적용
+$(document).ready(function () {
+    $(".mainImg2").mouseover(function () {
+        popUp2.fadeTo('slow', .9);
+    });
+    $(".mainBody").mouseout(function () {
+        popUp2.fadeOut('fast');
+    });
+});
+
+// 세번째 메인 이미지 적용
+$(document).ready(function () {
+    $(".mainImg3").mouseover(function () {
+        popUp3.fadeTo('slow', .9);
+    });
+    $(".mainBody").mouseout(function () {
+        popUp3.fadeOut('fast');
+    });
+});
+
+
+// 모달창 띄우기
+'use strict';
+const modal_wrap = document.querySelector('.modal_wrap')
+const modal_background = document.querySelector('.modal_background')
+
+//Show modal
+document.querySelector('#modal_btn').addEventListener('click', () => {
+    open()
+})
+
+//Hide modal
+document.querySelector('.modal_close').addEventListener('click', () => {
+    close()
+})
+
+//Hide modal
+window.addEventListener('click', (e) => {
+    e.target === modal_background ? close() : false
+})
+function close() {
+    modal_wrap.classList.remove('show-modal');
+    modal_background.classList.remove('show-modal');
+}
+function open() {
+    modal_wrap.classList.add('show-modal')
+    modal_background.classList.add('show-modal')
 }
