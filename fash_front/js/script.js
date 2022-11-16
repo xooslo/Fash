@@ -51,7 +51,7 @@ var imgArray = new Array();
 
 imgArray[0] = "./images/logo_black.png";
 imgArray[1] = "./images/logo_green.png";
-imgArray[2] = "./images/logo_orange.png";
+imgArray[2] = "./images/logo_pink.png";
 
 function showImage() {
     var objImg = document.getElementById("logo");
