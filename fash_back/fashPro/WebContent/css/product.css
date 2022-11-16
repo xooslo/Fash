@@ -1,0 +1,141 @@
+/* 폰트 세팅 */
+@font-face {
+    font-family: 'Happiness-Sans-Title';
+    src: url("../css/fonts/ttf/Happiness-Sans-Title.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Happiness-Sans-Regular';
+    src: url("../css/fonts/ttf/Happiness-Sans-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'DMSerifDisplay-Regular';
+    src: url("../css/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf");
+}
+
+/* 기본 세팅 */
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: #333;
+}
+
+/* 헤더 부분 시작 */
+header {
+    width: 100%;
+    height: 100px;
+    background: #fff;
+}
+
+.background {
+    display: flex;
+    align-items: center;
+    width: 1400px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.logo_div {
+    overflow: hidden;
+    position: relative;
+    width: 180px;
+    height: 45px;
+}
+
+.logo_div>img {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    padding-left: 30px;
+}
+
+.logo_div>img:first-child {
+    left: 0;
+}
+
+nav>ul {
+    display: flex;
+    width: 600px;
+    margin-left: 450px;
+}
+
+nav a {
+    display: block;
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+}
+
+.mainMenu {
+    position: relative;
+    width: 25%;
+}
+
+.mainMenu>a {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.subMenu {
+    position: absolute;
+    width: 100%;
+    z-index: 997;
+    display: none;
+}
+
+.mainMenu:hover>a {
+    color: #fff;
+    background: black;
+}
+
+.mainMenu:hover>a>i {
+    color: white;
+}
+
+.subMenu li:hover a {
+    color: #fff;
+    background: black;
+}
+/* 헤더 부분 끝 */
+
+/* 메인 부분 시작 */
+.product-list{
+    width: 735px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.products h3{
+    font-size: 24px;
+    color: #545454;
+    margin-top:60px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.product{
+    display: block;
+    width: 225px;
+    text-align: center;
+    text-decoration:none;
+    color: black;
+    float:left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+
+.product-name{
+    margin-top: 20px;
+    margin-bottom: 4px;
+}
+
+.clearfix{
+    clear: both;
+}
+/* 메인 부분 끝 */

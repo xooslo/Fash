@@ -1,13 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>FASH</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/jquery-3.1.1.min.js"></script>
-    <script src="https://kit.fontawesome.com/ce67765f5e.js" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<title>FASH</title>
+<link rel="stylesheet" href="./css/style.css">
+<script src="./js/jquery-3.1.1.min.js"></script>
+<script src="https://kit.fontawesome.com/ce67765f5e.js" crossorigin="anonymous"></script>
 </head>
-
 <body onload="showImage()">
     <header>
         <div class="background">
@@ -55,7 +56,7 @@
 
         <div class="popUpBox">
             <div class="popUp">
-                <h2>오늘의 추천 코디 🐈‍⬛🎱</h2>
+                <h2>오늘의 추천 코디 🐈‍🎱</h2>
                 <p>바시티 재킷과 레더 팬츠로 완성한 개성 만점 스트릿 룩</p>
                 <p><a href="#">코디에 사용된 아이템 <b>보러가기 -> </b></a></p>
             </div>
@@ -94,5 +95,4 @@
 
     <script src="./js/script.js"></script>
 </body>
-
 </html>

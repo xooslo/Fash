@@ -1,0 +1,298 @@
+/* 폰트 세팅 */
+@font-face {
+    font-family: 'Happiness-Sans-Title';
+    src: url("../css/fonts/ttf/Happiness-Sans-Title.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Happiness-Sans-Regular';
+    src: url("../css/fonts/ttf/Happiness-Sans-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'DMSerifDisplay-Regular';
+    src: url("../css/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf");
+}
+
+/* 기본 세팅 */
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: #333;
+}
+
+/* 메인(인덱스) 화면 시작 */
+header {
+    width: 100%;
+    height: 100px;
+    background: #fff;
+}
+
+.background {
+    display: flex;
+    align-items: center;
+    width: 1400px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.logo_div {
+    overflow: hidden;
+    position: relative;
+    width: 180px;
+    height: 45px;
+}
+
+.logo_div>img {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    padding-left: 30px;
+}
+
+.logo_div>img:first-child {
+    left: 0;
+}
+
+nav>ul {
+    display: flex;
+    width: 600px;
+    margin-left: 450px;
+}
+
+nav a {
+    display: block;
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+}
+
+.mainMenu {
+    position: relative;
+    width: 25%;
+}
+
+.mainMenu>a {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.subMenu {
+    position: absolute;
+    width: 100%;
+    z-index: 997;
+    display: none;
+}
+
+.mainMenu:hover>a {
+    color: #fff;
+    background: black;
+}
+
+.mainMenu:hover>a>i {
+    color: white;
+}
+
+.subMenu li:hover a {
+    color: #fff;
+    background: black;
+}
+
+.slide {
+    width: 1400px;
+    height: 900px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide>img {
+    position: absolute;
+    width: 1400px;
+    height: 900px;
+    top: 0;
+    left: -100%;
+}
+
+.slide>img:first-child {
+    left: 0;
+}
+/* 메인(인덱스) 화면 끝 */
+
+/* 팝업창 시작 */
+.mainBody {
+    position: relative;
+    width: 1400px;
+    height: 900px;
+    margin: 0 auto;
+}
+
+.popUpBox {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    z-index: 998;
+    display: none;
+}
+
+.popUp {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    left: 80%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 2;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background: #fff;
+    padding: 20px;
+}
+
+.popUp p {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.popUp a {
+    font-size: 13px;
+    padding: 10px;
+}
+
+.popUp a>b {
+    color: #0151E5;
+}
+
+.popUp2 a>b {
+    color: green;
+}
+
+.popUp3 a>b {
+    color: pink;
+}
+
+.popUpBox2 {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    z-index: 998;
+    display: none;
+}
+
+.popUp2 {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    left: 300%;
+    top: 200%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 2;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background: #fff;
+    padding: 20px;
+}
+
+.popUp2 p {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.popUp2 a {
+    padding: 10px;
+    font-size: 13px;
+}
+
+.popUpBox3 {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    z-index: 998;
+    display: none;
+}
+
+.popUp3 {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    left: 60%;
+    top: 250%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 2;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background: #fff;
+    padding: 20px;
+}
+
+.popUp3 p {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.popUp3 a {
+    padding: 10px;
+    font-size: 13px;
+}
+/* 팝업창 끝 */
+
+/* 모달창 시작 */
+.modal_wrap {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -250px 0 0 -250px;
+    z-index: 2;
+    display: none;
+}
+
+.modal_wrap.show-modal {
+    display: block;
+}
+
+.modal_background.show-modal {
+    display: block;
+}
+
+.modal_background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+.modal_close {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.modal_wrap .text {
+    margin-top: 5px;
+    margin-right: 5px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.modal_close .closeImg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* 모달창 끝 */
