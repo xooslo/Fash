@@ -14,26 +14,27 @@
 	<header>
 		<div class="background">
 			<div class="logo_div">
-				<a href="../index.html"><img src="../images/logo_black.png"
+				<a href="../index.jsp"><img src="../images/logo_black.png"
 					width="150px" height="45px" id="logo"></a>
 			</div>
 			<nav>
 				<ul>
-					<li class="mainMenu"><a href="#">HOME</a>
+					<li class="mainMenu">
+                        <a href="../index.jsp">HOME</a>
+                        <ul class="subMenu">
+                            <li><a href="../login/login.jsp">로그인</a></li>
+                            <li><a href="../join/join.jsp">회원 가입</a></li>
+                            <li><a href="../update/update.jsp">회원 정보<br>수정</a></li>
+                            <li><a href="#">회원 탈퇴</a></li>
+                        </ul>
+                    </li>
+					<li class="mainMenu"><a href="#">PRODUCTS</a>
 						<ul class="subMenu">
-							<li><a href="./login/login.html">로그인</a></li>
-							<li><a href="./join/join.html">회원 가입</a></li>
-							<li><a href="./update/MemberUpdate.html">회원 정보<br>수정
+							<li><a href="./product_blue.jsp">첫번째 코디<br>제품 보러가기
 							</a></li>
-							<li><a href="#">회원 탈퇴</a></li>
-						</ul></li>
-					<li class="mainMenu"><a href="./product/product.html">PRODUCTS</a>
-						<ul class="subMenu">
-							<li><a href="#">첫번째 코디<br>보러가기
+							<li><a href="./product_green.jsp">두번째 코디<br>제품 보러가기
 							</a></li>
-							<li><a href="#">두번째 코디<br>보러가기
-							</a></li>
-							<li><a href="#">세번째 코디<br>보러가기
+							<li><a href="./product_pink.jsp">세번째 코디<br>제품 보러가기
 							</a></li>
 							<li><a href="#">전체 제품 보기</a></li>
 						</ul></li>
@@ -141,6 +142,14 @@
 			<div class="clearfix"></div>
 		</div>
 	</div>
+	
+	<div class="modal_background"></div>
+    <div class="modal_wrap">
+        <div class="modal_close">X</div>
+        <div class="text">
+            <img src="../images/me_.jpg" width="500px" height="300px">
+        </div>
+    </div>
 
 	<script src="../js/script.js"></script>
 </body>

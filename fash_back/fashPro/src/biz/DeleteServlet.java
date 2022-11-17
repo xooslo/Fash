@@ -31,7 +31,7 @@ public class DeleteServlet extends HttpServlet {
 		n = dao.deleteMember(id);
 		
 		if(n>0)
-			response.sendRedirect("/index.jsp");
+			out.print("<script> alert('회원 탈퇴 완료'); </script>");
 		else
 			out.print("<script> alert('회원 정보 삭제를 실패했습니다.'); </script>");
 	}

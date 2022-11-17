@@ -25,14 +25,17 @@ public class UpdateServlet extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 		
-		String id, pwd;
+		String id, pwd, pwdCk, email, tel;
 		MemberDAO dao = new MemberDAO();
 		int n = 0;
 		
 		id = request.getParameter("id");
 		pwd = request.getParameter("pwd");
+		pwdCk = request.getParameter("pwdCk");
+		email = request.getParameter("email");
+		tel = request.getParameter("tel");
 		
-		n = dao.updateMember(id, pwd);
+		n = dao.updateMember(id, pwd, pwdCk, email, tel);
 		
 		if(n>0)
 			response.sendRedirect("/index.jsp");

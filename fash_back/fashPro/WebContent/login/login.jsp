@@ -1,3 +1,4 @@
+<%@page import="java.io.PrintWriter"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -15,7 +16,7 @@
 		String id = (String)session.getAttribute("loginOK");
 
 		if(id != null){
-			response.sendRedirect("/index.jsp");
+			response.sendRedirect("../index.jsp");
 		}
 		else{
 %>
@@ -33,7 +34,7 @@
         	</div>
         	<div class="login_join">
             	<a href="#"><button class="btn_login">로그인</button><br></a>
-            	<a href="#"><button class="btn_join">회원가입</button></a> 
+            	<a href="../join/join.jsp"><button class="btn_join">회원가입</button></a> 
         	</div>
     	</div>
     </form>

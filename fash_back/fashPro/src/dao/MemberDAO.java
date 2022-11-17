@@ -1,5 +1,6 @@
 package dao;
 
+import javax.swing.JOptionPane;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -35,24 +36,29 @@ public class MemberDAO {
 		return list;
 	}
 	
-	public int insertMember(String name, String userId, String userPwd, String pwdCk, String email, String gender, String tel, String address) {
+	public int insertMember(String name, String userId, String userPwd, String pwdCk, String email, String gender, String tel, String adNum, String address) {
 		int n = 0;
 		Connection con = null;
 		PreparedStatement pstmt = null;
-		String sql = "insert into member values(?, ?, ?, ?, ?, ?, ?, ?)";
+		String sql = "insert into member values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		
 		con = JDBCUtil.getConnection();
 		try {
-			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, name);
-			pstmt.setString(2, userId);
-			pstmt.setString(3, userPwd);
-			pstmt.setString(4, pwdCk);
-			pstmt.setString(5, email);
-			pstmt.setString(6, gender);
-			pstmt.setString(7, tel);
-			pstmt.setString(8, address);
-			n = pstmt.executeUpdate();
+			if(userPwd == pwdCk || gender != null || tel != null || adNum != null ||address != null) {
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1, name);
+				pstmt.setString(2, userId);
+				pstmt.setString(3, userPwd);
+				pstmt.setString(4, pwdCk);
+				pstmt.setString(5, email);
+				pstmt.setString(6, gender);
+				pstmt.setString(7, tel);
+				pstmt.setString(8, adNum);
+				pstmt.setString(9, address);
+				n = pstmt.executeUpdate();
+			}else {
+				JOptionPane.showMessageDialog(null, "모든 항목을 제대로 입력해주세요.");
+			}
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -62,18 +68,20 @@ public class MemberDAO {
 		return n;
 	}
 	
-	public int updateMember(String userId, String userPwd) {
+	public int updateMember(String userId, String userPwd, String pwdCk, String email, String tel) {
 		int n = 0;
 		
 		Connection con = null;
 		PreparedStatement pstmt = null;
-		String sql = "update member set pwd=? where id=?";
+		String sql = "update member set pwd=?, email=?, tel=? where id=?";
 		
 		con = JDBCUtil.getConnection();
 		try {
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, userPwd);
-			pstmt.setString(2, userId);
+			pstmt.setString(1, pwdCk);
+			pstmt.setString(2, email);
+			pstmt.setString(3, tel);
+			pstmt.setString(4, userId);
 			n = pstmt.executeUpdate();
 			
 		} catch (SQLException e) {
@@ -129,4 +137,5 @@ public class MemberDAO {
 		}
 		return result;
 	}
+	
 }

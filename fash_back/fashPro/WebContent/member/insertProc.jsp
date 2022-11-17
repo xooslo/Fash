@@ -9,7 +9,7 @@
 </head>
 <body>
 <%
-	String name, id, pwd, pwdCk, email, gender, tel, address;
+	String name, id, pwd, pwdCk, email, gender, tel, adNum, address;
 	MemberDAO dao = new MemberDAO();
 	int n = 0;
 	
@@ -20,11 +20,12 @@
 	email = request.getParameter("email");
 	gender = request.getParameter("gender");
 	tel = request.getParameter("tel");
-	address = request.getParameter("address");
+	adNum = request.getParameter("adNum");
+	address = request.getParameter("address") + " " + request.getParameter("adExtra") + " " + request.getParameter("adDetail");
 	
 	
 	
-	n = dao.insertMember(name, id, pwd, pwdCk, email, gender, tel, address);
+	n = dao.insertMember(name, id, pwd, pwdCk, email, gender, tel, adNum, address);
 	
 	if(n>0)
 		response.sendRedirect("../login/login.jsp");

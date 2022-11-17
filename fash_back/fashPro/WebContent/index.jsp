@@ -22,19 +22,20 @@
                     <li class="mainMenu">
                         <a href="#">HOME</a>
                         <ul class="subMenu">
-                            <li><a href="./login/login.html">로그인</a></li>
-                            <li><a href="./join/join.html">회원 가입</a></li>
-                            <li><a href="./update/MemberUpdate.html">회원 정보<br>수정</a></li>
-                            <li><a href="#">회원 탈퇴</a></li>
+                            <li><a href="./login/login.jsp">로그인</a></li>
+                            <li><a href="./join/join.jsp">회원 가입</a></li>
+                            <li><a href="./update/update.jsp">회원 정보<br>수정</a></li>
+                            <li><a href="/delete">회원 탈퇴</a></li>
+                            <li><a href="/logout">로그아웃</a></li>
                         </ul>
                     </li>
                     <li class="mainMenu">
-                        <a href="./product/product.html">PRODUCTS</a>
+                        <a href="./product/product.jsp">PRODUCTS</a>
                         <ul class="subMenu">
-                            <li><a href="#">첫번째 코디<br>보러가기</a></li>
-                            <li><a href="#">두번째 코디<br>보러가기</a></li>
-                            <li><a href="#">세번째 코디<br>보러가기</a></li>
-                            <li><a href="#">전체 제품 보기</a></li>
+                            <li><a href="./product/product_blue.jsp">첫번째 코디<br>제품 보러가기</a></li>
+                            <li><a href="./product/product_green.jsp">두번째 코디<br>제품 보러가기</a></li>
+                            <li><a href="./product/product_pink.jsp">세번째 코디<br>제품 보러가기</a></li>
+                            <li><a href="./product/product.jsp">전체 제품 보기</a></li>
                         </ul>
                     </li>
                     <li class="mainMenu">
@@ -56,24 +57,24 @@
 
         <div class="popUpBox">
             <div class="popUp">
-                <h2>오늘의 추천 코디 🐈‍🎱</h2>
-                <p>바시티 재킷과 레더 팬츠로 완성한 개성 만점 스트릿 룩</p>
+                <h2>오늘의 추천 코디 🎥🎱</h2>
+                <p>바시티 재킷과 레더 팬츠로 완성한<br>개성 만점 스트릿 룩</p>
                 <p><a href="#">코디에 사용된 아이템 <b>보러가기 -> </b></a></p>
             </div>
         </div>
 
         <div class="popUpBox2">
             <div class="popUp2">
-                <h2>오늘의 추천 코디 🪀🧩</h2>
-                <p>윈드브레이커와 체크 패턴 카디건의 조합에 캐주얼한 스커트로 완성한 캐주얼 룩</p>
+                <h2>오늘의 추천 코디 🌳🧩</h2>
+                <p>윈드브레이커와 체크 패턴 카디건의 조합에<br>캐주얼한 스커트로 완성한 캐주얼 룩</p>
                 <p><a href="#">코디에 사용된 아이템 <b>보러가기 -> </b></a></p>
             </div>
         </div>
 
         <div class="popUpBox3">
             <div class="popUp3">
-                <h2>오늘의 추천 코디 🎟️💗</h2>
-                <p>핑크 카디건에 퀼팅 재킷을 더하고 미디 스커트로 완성한 걸리시 룩</p>
+                <h2>오늘의 추천 코디 👚💗</h2>
+                <p>핑크 카디건에 퀼팅 재킷을 더하고<br>미니 스커트로 완성한 걸리시 룩</p>
                 <p><a href="#">코디에 사용된 아이템 <b>보러가기 -> </b></a></p>
             </div>
         </div>

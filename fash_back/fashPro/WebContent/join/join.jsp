@@ -12,7 +12,16 @@
 </head>
 
 <body>
-	<form action="/member/insertProc.jsp" method="post">
+
+<%
+		String id = (String)session.getAttribute("loginOK");
+
+		if(id != null){
+			response.sendRedirect("../index.jsp");
+		}
+		else{
+%>
+	<form action="../member/insertProc.jsp" method="post">
 		<section id="join-container">
 			<div class="join">
 				<div class="join-title">
@@ -63,22 +72,23 @@
 						</tr>
 						<tr>
 							<td>주소</td>
-							<td class="join-input-adNum"><input type="text"
-								id="sample6_postcode" placeholder="우편번호"> &nbsp; <input
-								type="button" class="join-address"
-								onclick="sample6_execDaumPostcode()" value="우편번호 찾기"></td>
+							<td class="join-input-adNum">
+								<input type="text" id="sample6_postcode" placeholder="우편번호" name="adNum"> &nbsp; 
+								<input type="button" class="join-address" onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
+							</td>
 						</tr>
 						<tr>
 							<td></td>
-							<td class="join-input-adress"><input type="text"
-								id="sample6_address" placeholder="주소"> &nbsp; <input
-								type="text" class="join-address-extra"
-								id="sample6_detailAddress" placeholder="상세주소"></td>
+							<td class="join-input-adress">
+								<input type="text" id="sample6_address" placeholder="주소" name="address"> &nbsp; 
+								<input type="text" name="adExtra" id="sample6_detailAddress" placeholder="상세주소">
+							</td>
 						</tr>
 						<tr>
 							<td></td>
-							<td class="join-input"><input type="text"
-								id="sample6_extraAddress" placeholder="참고항목"></td>
+							<td class="join-input">
+								<input type="text" id="sample6_extraAddress" name="adDetail" placeholder="참고항목">
+							</td>
 						</tr>
 					</table>
 
@@ -91,9 +101,11 @@
 			</div>
 		</section>
 	</form>
+<%
+		}
+%>
 
-	<script
-		src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 	<script>
 		function sample6_execDaumPostcode() {
 			new daum.Postcode(

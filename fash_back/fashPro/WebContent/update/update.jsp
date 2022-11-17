@@ -1,3 +1,4 @@
+<%@page import="java.io.PrintWriter"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -13,7 +14,14 @@
 
 <body>
 
-<% String id = request.getParameter("id"); %>
+<%
+	String id = (String)session.getAttribute("loginOK");
+
+	if(id == null){
+		response.sendRedirect("../login/login.jsp");
+	}
+	else{
+%>
 
 	<form action="/update" method="post">
 		<div id="update_container">
@@ -23,28 +31,25 @@
 			<div class="id_password_update">
 				<input type="text" name="id" id="id" placeholder="id" value="<%= id %>" readonly><br>
 				<input type="password" name="pwd" id="pwd"
-					placeholder="기존 비밀번호를 입력해주세요"><br> <input
+					placeholder="기존 비밀번호를 입력해주세요"><br> 
+				<input
 					type="password" name="pwdCk" id="pwdCk"
 					placeholder="새로운 비밀번호를 입력해주세요">
 			</div>
 			<div class="phone_email_update">
-				<input type="email" name="email" id="email" placeholder="새로운 이메일 입력">
-				@ <select name="email-extra" id="email-extra">
-					<option value="" selected>example.com</option>
-					<option value="@gmail.com">gmail.com</option>
-					<option value="@naver.com">naver.com</option>
-					<option value="@daum.net">daum.net</option>
-					<option value="@yahoo.co.kr">yahoo.co.kr</option>
-					<option value="@co.kr">co.kr</option>
-				</select><br> <input type="tel" name="tel" id="tel"
-					placeholder="전화번호 입력">
+				<input type="email"name="email" id="email" placeholder="새로운 이메일을 입력해주세요"> <br>
+				<input type="tel" name="tel" id="tel" placeholder="전화번호 입력">
 			</div>
 			<div class="update_submit">
 				<a href="#"><button class="btn_update">수정하기</button></a><br> <a
-					href="#"><button class="btn_reset">취소</button></a>
+					href="../index.jsp"><button class="btn_reset">취소</button></a>
 			</div>
 		</div>
 	</form>
+	
+<%
+	}
+%>
 
 	<script src="../js/script.js"></script>
 </body>

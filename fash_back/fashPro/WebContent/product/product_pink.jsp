@@ -1,0 +1,121 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FASH</title>
+    <link rel="stylesheet" href="../css/product.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/ce67765f5e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="background">
+            <div class="logo_div">
+                <a href="../index.jsp"><img src="../images/logo_black.png" width="150px" height="45px" id="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="mainMenu">
+                        <a href="#">HOME</a>
+                        <ul class="subMenu">
+                            <li><a href="./login/login.jsp">로그인</a></li>
+                            <li><a href="./join/join.jsp">회원 가입</a></li>
+                            <li><a href="./update/MemberUpdate.jsp">회원 정보<br>수정</a></li>
+                            <li><a href="#">회원 탈퇴</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainMenu">
+                        <a href="./product.jsp">PRODUCTS</a>
+                        <ul class="subMenu">
+                            <li><a href="./product_blue.jsp">첫번째 코디<br>제품 보러가기</a></li>
+                            <li><a href="./product_green.jsp">두번째 코디<br>제품 보러가기</a></li>
+                            <li><a href="#">세번째 코디<br>제품 보러가기</a></li>
+                            <li><a href="./product.jsp">전체 제품 보기</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainMenu">
+                        <a href="#">ABOUT</a>
+                        <ul class="subMenu">
+                            <li id="modal_btn"><a href="#">개발자 보기</a></li>
+                            <li><a href="https://github.com/xooslo/Fash">개발 과정<br>둘러보기</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainMenu">
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="products">
+        <h3>Third Outfit</h3>
+
+        <div class="product-list">
+            <a href="#" class="product">
+                <img src="../images/pink_jumper.jpg" width="225" height="225px">
+                <div class="product-name">
+                    퀼트 숏 패딩<br>[아이보리]
+                </div>
+                <div class="product-price">
+                    159,000원
+                </div>
+            </a>
+
+            <a href="#" class="product">
+                <img src="../images/pink_cardigan.jpg" width="225" height="225px">
+                <div class="product-name">
+                    램스울 크롭 가디건<br>[체리핑크]
+                </div>
+                <div class="product-price">
+                    66,000원
+                </div>
+            </a>
+
+            <a href="#" class="product">
+                <img src="../images/pink_shirt.jpg" width="225" height="225px">
+                <div class="product-name">
+                    하이 넥 셔링 목폴라<br>[화이트]
+                </div>
+                <div class="product-price">
+                    59,000원
+                </div>          
+            </a>
+
+            <a href="#" class="product">
+                <img src="../images/pink_skirt.jpg" width="225" height="225px">
+                <div class="product-name">
+                    스웨이드 슬릿 스커트<br>[크림]
+                </div>
+                <div class="product-price">
+                    79,000원
+                </div>          
+            </a>
+
+            <a href="#" class="product">
+                <img src="../images/pink_jew.jpg" width="225" height="225px">
+                <div class="product-name">
+                    비포하트 링귀걸이
+                </div>
+                <div class="product-price">
+                    12,500원
+                </div>          
+            </a>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="modal_background"></div>
+    <div class="modal_wrap">
+        <div class="modal_close">X</div>
+        <div class="text">
+            <img src="../images/me_.jpg" width="500px" height="300px">
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
