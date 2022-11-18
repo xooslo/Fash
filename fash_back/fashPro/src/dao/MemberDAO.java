@@ -1,6 +1,8 @@
 package dao;
 
 import javax.swing.JOptionPane;
+
+import java.awt.print.Book;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,6 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import common.JDBCUtil;
+import vo.ItemVO;
 
 public class MemberDAO {
 	
@@ -136,6 +139,42 @@ public class MemberDAO {
 			JDBCUtil.close(con, pstmt, rs);
 		}
 		return result;
+	}
+	
+	public ArrayList<ItemVO> getItemList(String key){
+		ArrayList<ItemVO> list = new ArrayList<>();
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql;
+		String str = "%"+key+"%";
+		
+		try {
+			con = JDBCUtil.getConnection();
+			
+			if(key.equals("all")) {
+				sql = "select * from item order by item_no asc";
+				pstmt = con.prepareStatement(sql);
+			}else {
+				sql = "select * from item where name like ? order by item_no asc";
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1, str);
+			}
+			
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				ItemVO vo = new ItemVO();
+				vo.setItem_no(rs.getInt("item_no"));
+				vo.setName(rs.getString("name"));
+				vo.setPrice(rs.getInt("price"));
+				list.add(vo);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			JDBCUtil.close(con, pstmt, rs);
+		}
+		return list;
 	}
 	
 }

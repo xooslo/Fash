@@ -59,7 +59,7 @@
             <div class="popUp">
                 <h2>오늘의 추천 코디 🎥🎱</h2>
                 <p>바시티 재킷과 레더 팬츠로 완성한<br>개성 만점 스트릿 룩</p>
-                <p><a href="#">코디에 사용된 아이템 <b>보러가기 -> </b></a></p>
+                <p><a href="./product/product_blue.jsp">코디에 사용된 아이템 <b>보러가기 -> </b></a></p>
             </div>
         </div>
 
@@ -67,7 +67,7 @@
             <div class="popUp2">
                 <h2>오늘의 추천 코디 🌳🧩</h2>
                 <p>윈드브레이커와 체크 패턴 카디건의 조합에<br>캐주얼한 스커트로 완성한 캐주얼 룩</p>
-                <p><a href="#">코디에 사용된 아이템 <b>보러가기 -> </b></a></p>
+                <p><a href="./product/product_green.jsp">코디에 사용된 아이템 <b>보러가기 -> </b></a></p>
             </div>
         </div>
 
@@ -75,7 +75,7 @@
             <div class="popUp3">
                 <h2>오늘의 추천 코디 👚💗</h2>
                 <p>핑크 카디건에 퀼팅 재킷을 더하고<br>미니 스커트로 완성한 걸리시 룩</p>
-                <p><a href="#">코디에 사용된 아이템 <b>보러가기 -> </b></a></p>
+                <p><a href="./product/product_pink.jsp">코디에 사용된 아이템 <b>보러가기 -> </b></a></p>
             </div>
         </div>
 

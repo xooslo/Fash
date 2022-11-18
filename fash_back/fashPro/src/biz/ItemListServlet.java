@@ -2,43 +2,38 @@ package biz;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import dao.MemberDAO;
+import vo.ItemVO;
 
-@WebServlet("/login")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/listItem")
+public class ItemListServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public LoginServlet() {
+    public ItemListServlet() {
         super();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8"); 
-		
-		String id, pwd;
-		boolean result = false;
 		PrintWriter out = response.getWriter();
-		
-		id = request.getParameter("loginId");
-		pwd = request.getParameter("loginPwd");
+		String key = request.getParameter("item_name");
 		
 		MemberDAO dao = new MemberDAO();
-		result = dao.getMemberPWD(id, pwd);
+		ArrayList<ItemVO> list = dao.getItemList(key);
 		
-		if(result == true) {
-			HttpSession session = request.getSession();
-			session.setAttribute("loginOK", id);
-			response.sendRedirect("/index.jsp");
-		} else {
-			out.println("<script> alert('회원 정보가 맞지 않습니다.'); history.back(); </script>");
+		if(list != null) {
+			request.setAttribute("item_list", list);
 		}
+		
+		request.getRequestDispatcher("/product/searchResult.jsp").forward(request, response);
 	}
+
 }

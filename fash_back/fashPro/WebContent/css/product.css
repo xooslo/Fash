@@ -109,12 +109,13 @@ nav a {
     width: 735px;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Happiness-Sans-Regular';
 }
 .products h3{
     font-size: 24px;
     color: #545454;
     margin-top:60px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
@@ -137,6 +138,26 @@ nav a {
 
 .clearfix{
     clear: both;
+}
+
+.search{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 60px;
+	margin-left: 20px;
+	font-family: 'DMSerifDisplay-Regular';
+}
+
+.search input{
+	text-align: center;
+	width: 200px;
+	border-radius: 5px;
+}
+
+.search input:nth-of-type(2){
+	width: 50px;
+	background-color: black;
+	color: white;
 }
 /* 메인 부분 끝 */
 
@@ -193,3 +214,31 @@ nav a {
 }
 
 /* 모달창 끝 */
+
+/* 검색 결과 창 시작 */
+.none{
+	height: 100px;
+}
+
+.result{
+	margin-left:auto; 
+    margin-right:auto;
+	font-family: 'DMSerifDisplay-Regular';
+	text-align: center;
+}
+
+.result th{
+	background-color: #1C386B;
+	border-left: 1px solid white;
+	color: white;
+	width: 250px;
+	height: 30px;
+}
+
+.result td{
+	background-color: white;
+	border-bottom: 1px solid #5C95FF;
+	color: #5C95FF;
+	height: 50px;
+}
+/* 검색 결과 창 끝 */

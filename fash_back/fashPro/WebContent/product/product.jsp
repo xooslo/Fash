@@ -53,6 +53,13 @@
 
 	<div class="products">
 		<h3>Our Products</h3>
+		
+		<div class="search">
+			<form action="/listItem" method="get">
+				<input type="text" name="item_name">
+				<input type="submit" value="검색">
+			</form>
+		</div>
 
 		<div class="product-list">
 			<a href="#" class="product"> <img src="../images/blue_jumper.jpg"
@@ -61,79 +68,93 @@
 					벨벳틴 오버 바시티 자켓<br>[스틸블루]
 				</div>
 				<div class="product-price">239,000원</div>
-			</a> <a href="#" class="product"> <img
+			</a> 
+			<a href="#" class="product"> <img
 				src="../images/green_jumper.jpg" width="225" height="225px">
 				<div class="product-name">
 					레트로 콤비 윈드 브레이커<br>[페일민트]
 				</div>
 				<div class="product-price">168,000원</div>
-			</a> <a href="#" class="product"> <img
+			</a> 
+			<a href="#" class="product"> <img
 				src="../images/pink_jumper.jpg" width="225" height="225px">
 				<div class="product-name">
 					퀼트 숏 패딩<br>[아이보리]
 				</div>
 				<div class="product-price">159,000원</div>
-			</a> <a href="#" class="product"> <img src="../images/blue_neat.jpg"
+			</a> 
+			<a href="#" class="product"> <img src="../images/blue_neat.jpg"
 				width="225" height="225px">
 				<div class="product-name">
 					MZ 매거진 니트<br>[차콜]
 				</div>
 				<div class="product-price">79,000원</div>
-			</a> <a href="#" class="product"> <img
+			</a> 
+			<a href="#" class="product"> <img
 				src="../images/green_cardigan.jpg" width="225" height="225px">
 				<div class="product-name">
 					플랜트 아가일 니트 집업<br>[네이비]
 				</div>
 				<div class="product-price">139,000원</div>
-			</a> <a href="#" class="product"> <img
+			</a> 
+			<a href="#" class="product"> <img
 				src="../images/pink_cardigan.jpg" width="225" height="225px">
 				<div class="product-name">
 					램스울 크롭 가디건<br>[체리핑크]
 				</div>
 				<div class="product-price">66,000원</div>
-			</a> <a href="#" class="product"> <img src="../images/blue_shirt.jpg"
+			</a> 
+			<a href="#" class="product"> <img src="../images/blue_shirt.jpg"
 				width="225" height="225px">
 				<div class="product-name">
 					스탠다드 롱 슬리브<br>[화이트]
 				</div>
 				<div class="product-price">45,000원</div>
-			</a> <a href="#" class="product"> <img
+			</a> 
+			<a href="#" class="product"> <img
 				src="../images/green_shirt.jpg" width="225" height="225px">
 				<div class="product-name">
 					오버핏 포켓 셔츠<br>[화이트]
 				</div>
 				<div class="product-price">49,000</div>
-			</a> <a href="#" class="product"> <img src="../images/pink_shirt.jpg"
+			</a> 
+			<a href="#" class="product"> <img src="../images/pink_shirt.jpg"
 				width="225" height="225px">
 				<div class="product-name">
 					하이 넥 셔링 목폴라<br>[화이트]
 				</div>
 				<div class="product-price">59,000원</div>
-			</a> <a href="#" class="product"> <img
+			</a> 
+			<a href="#" class="product"> <img
 				src="../images/blue_pants_2.jpg" width="225" height="225px">
 				<div class="product-name">
 					MZ 리벳 팬츠<br>[블랙]
 				</div>
 				<div class="product-price">129,000원</div>
-			</a> <a href="#" class="product"> <img
+			</a> 
+			<a href="#" class="product"> <img
 				src="../images/green_skirt.jpg" width="225" height="225px">
 				<div class="product-name">스포티 포켓 미니 스커트</div>
 				<div class="product-price">58,800원</div>
-			</a> <a href="#" class="product"> <img src="../images/pink_skirt.jpg"
+			</a> 
+			<a href="#" class="product"> <img src="../images/pink_skirt.jpg"
 				width="225" height="225px">
 				<div class="product-name">
 					스웨이드 슬릿 스커트<br>[크림]
 				</div>
 				<div class="product-price">79,000원</div>
-			</a> <a href="#" class="product"> <img src="../images/blue_jew.jpg"
+			</a> 
+			<a href="#" class="product"> <img src="../images/blue_jew.jpg"
 				width="225" height="225px">
 				<div class="product-name">써클 실버 링귀걸이</div>
 				<div class="product-price">35,000원</div>
-			</a> <a href="#" class="product"> <img src="../images/green_jew.jpg"
+			</a> 
+			<a href="#" class="product"> <img src="../images/green_jew.jpg"
 				width="225" height="225px">
 				<div class="product-name">마이부 달링 귀걸이</div>
 				<div class="product-price">27,000원</div>
-			</a> <a href="#" class="product"> <img src="../images/pink_jew.jpg"
+			</a> 
+			<a href="#" class="product"> <img src="../images/pink_jew.jpg"
 				width="225" height="225px">
 				<div class="product-name">비포하트 링귀걸이</div>
 				<div class="product-price">12,500원</div>
