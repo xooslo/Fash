@@ -20,9 +20,9 @@
                 <li class="mainMenu">
                     <a href="#">HOME</a>
                     <ul class="subMenu">
-                        <li><a href="./login/login.jsp">로그인</a></li>
-                        <li><a href="./join/join.jsp">회원 가입</a></li>
-                        <li><a href="./update/MemberUpdate.jsp">회원 정보<br>수정</a></li>
+                        <li><a href="../login/login.jsp">로그인</a></li>
+                        <li><a href="../join/join.jsp">회원 가입</a></li>
+                        <li><a href="../update/update.jsp">회원 정보<br>수정</a></li>
                         <li><a href="#">회원 탈퇴</a></li>
                     </ul>
                 </li>

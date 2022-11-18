@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.MemberDAO;
 
@@ -23,10 +24,11 @@ public class DeleteServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 		
+		HttpSession session = request.getSession();
 		PrintWriter out = response.getWriter();
 		MemberDAO dao = new MemberDAO();
 		int n = 0;
-		String id = request.getParameter("id");
+		String id = (String)session.getAttribute("loginOK");
 		
 		n = dao.deleteMember(id);
 		
